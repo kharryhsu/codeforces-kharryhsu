@@ -13,14 +13,14 @@ Problems are organized by difficulty rating:
 
 ```
 800/
+900/
 1000/
-1200/
 ...
 ```
 
 Each solution file is named as:
 ```
-<problemID>.cpp
+<problemID>.<extension>
 ```
 
 ## 📈 Progress
