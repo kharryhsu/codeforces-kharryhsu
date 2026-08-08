@@ -5,19 +5,19 @@ using namespace std;
 #define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
 
 // Solve Function
-void solve() {
+void solve(){
     int n;
     cin >> n;
 }
 
 // Main Function
-int main() {
+int main(){
     fastio;
 
     int t = 1;
     cin >> t;
 
-    while (t--) {
+    while(t--){
         solve();
     }
 
