@@ -36,7 +36,7 @@ import urllib.request
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent
-CONTEST_DIR_NAMES = {"contest", "contests"}
+CONTEST_DIR_NAMES = {"contest", "contests", "gym", "gyms"}
 SOURCE_EXTS = {".cpp", ".cc", ".c", ".py", ".java", ".kt", ".rs", ".go"}
 PROBLEM_RE = re.compile(r"^(\d+)([A-Za-z]\d*)")
 CF_API_URL = "https://codeforces.com/api/problemset.problems"
@@ -74,9 +74,8 @@ def parse_problem_id(stem):
         return None
     return int(m.group(1)), m.group(2)
 
-
 def find_contest_label(path):
-    """Walk up from a file to find the folder inside Contest/ it belongs to."""
+    """Find the competition folder containing the problem."""
     for parent in path.parents:
         if parent.parent.name.lower() in CONTEST_DIR_NAMES:
             return parent.name
